@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import FormCheckboxes from './components/FormCheckboxes';
+import FormInputs from './components/FormInputs';
+import FormRadios from './components/FormRadios';
 
 function App() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target)
+    console.log(Object.fromEntries(data.entries()));
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={ handleSubmit }>
+
+        <FormInputs name="fullname" placeholder="Full Name"/>
+        <h3>Type of Residence</h3>
+        <FormRadios />
+        <FormInputs name="email" placeholder="Email"/>
+        <FormInputs name="address" placeholder="Address"/>
+        <FormInputs name="city" placeholder="City"/>
+        <FormInputs name="state" placeholder="State"/>
+        <FormInputs name="zip" placeholder="Zip"/>
+        <FormInputs name="phone" placeholder="Phone #"/>
+        <h3>Do you have any children under the age of 13?</h3>
+        <FormCheckboxes label="Yes" />
+        <FormCheckboxes label="No" />
+        <button>Submit</button>
+
+      </form>
     </div>
   );
 }
