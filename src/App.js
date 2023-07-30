@@ -24,9 +24,12 @@ function App() {
         <FormInputs name="state" placeholder="State"/>
         <FormInputs name="zip" placeholder="Zip"/>
         <FormInputs name="phone" placeholder="Phone #"/>
-        <h3>Do you have any children under the age of 13?</h3>
-        <FormCheckboxes label="Yes" />
-        <FormCheckboxes label="No" />
+        <h3>Do you have any of the following in your home: </h3>
+        <FormCheckboxes label="Dog" />
+        <FormCheckboxes label="Cat" />
+        <FormCheckboxes label="Bird" />
+        <FormCheckboxes label="Rabbit" />
+        <FormCheckboxes label="Other Pet" />
         <button>Submit</button>
 
       </form>
