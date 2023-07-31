@@ -1,13 +1,12 @@
 import React from 'react'
+import './FormCheckboxes.css'
 
 const FormCheckboxes = (props) => {
   return (
     <div>
         <div className="formCheckboxes">
-            <label>
-                {props.label}
-                <input type="checkbox" />
-            </label>
+            {props.label}
+            <input className="checkbox" type="checkbox" />
         </div>
     </div>
   )
