@@ -30,6 +30,8 @@ function App() {
         <FormCheckboxes label="Bird" />
         <FormCheckboxes label="Rabbit" />
         <FormCheckboxes label="Other Pet" />
+        <h4>If other, please specify:</h4>
+        <FormInputs label="OtherInput" placeholder="Ferret" /> 
         <button>Submit</button>
 
       </form>
