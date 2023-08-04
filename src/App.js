@@ -1,14 +1,82 @@
+import { useState } from 'react';
 import './App.css';
 import FormCheckboxes from './components/FormCheckboxes';
 import FormInputs from './components/FormInputs';
 import FormRadios from './components/FormRadios';
 
 function App() {
+  const [values, setValues] = useState({
+    fullname: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    zip: "",
+    phone: "",
+    otherInput: ""
+  })
+
+  const inputs = [
+    {
+      id: 1,
+      name: "fullname",
+      type: "text",
+      placeholder: "Full Name",
+      label: "fullname"
+    },
+    {
+      id: 2,
+      name: "email",
+      type: "text",
+      placeholder: "Email",
+      label: "email"
+    },
+    {
+      id: 3,
+      name: "address",
+      type: "text",
+      placeholder: "Address",
+      label: "address"
+    },
+    {
+      id: 4,
+      name: "city",
+      type: "text",
+      placeholder: "City",
+      label: "city"
+    },
+    {
+      id: 5,
+      name: "state",
+      type: "text",
+      placeholder: "State",
+      label: "state"
+    },
+    {
+      id: 6,
+      name: "zipCode",
+      type: "text",
+      placeholder: "Zip",
+      label: "zipCode"
+    },
+    {
+      id: 7,
+      name: "phoneNumber",
+      type: "text",
+      placeholder: "Phone #",
+      label: "phoneNumber"
+    },
+    {
+      id: 8,
+      name: "otherInput",
+      type: "text",
+      placeholder: "Ferret",
+      label: "otherInput"
+    }
+  ]
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(e.target)
-    console.log(Object.fromEntries(data.entries()));
   }
 
   return (
@@ -31,7 +99,7 @@ function App() {
         <FormCheckboxes label="Rabbit" />
         <FormCheckboxes label="Other Pet" />
         <h4>If other, please specify:</h4>
-        <FormInputs label="OtherInput" placeholder="Ferret" /> 
+        <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" /> 
         <button>Submit</button>
 
       </form>
