@@ -1,11 +1,8 @@
 input {
     padding: 15px;
-    margin: 10px 0;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    border-radius: 10px 10px 0 0;
+    margin: .25rem auto 1rem auto;
+    border: none;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     text-align: center;
     font-size: 1rem;
@@ -13,4 +10,10 @@ input {
 
 input::placeholder {
     text-align: center;
+}
+
+@media(max-width: 768px) {
+    input {
+        padding: 5px;
+    }
 }

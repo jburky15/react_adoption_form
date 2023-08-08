@@ -22,56 +22,56 @@ function App() {
       name: "fullname",
       type: "text",
       placeholder: "Full Name",
-      label: "fullname"
+      label: "Full Name"
     },
     {
       id: 2,
       name: "email",
       type: "text",
       placeholder: "Email",
-      label: "email"
+      label: "Email"
     },
     {
       id: 3,
       name: "address",
       type: "text",
       placeholder: "Address",
-      label: "address"
+      label: "Address"
     },
     {
       id: 4,
       name: "city",
       type: "text",
       placeholder: "City",
-      label: "city"
+      label: "City"
     },
     {
       id: 5,
       name: "state",
       type: "text",
       placeholder: "State",
-      label: "state"
+      label: "State"
     },
     {
       id: 6,
       name: "zipCode",
       type: "text",
       placeholder: "Zip",
-      label: "zipCode"
+      label: "Zip Code"
     },
     {
       id: 7,
       name: "phoneNumber",
       type: "text",
       placeholder: "Phone #",
-      label: "phoneNumber"
+      label: "Phone Number"
     },
     {
       id: 8,
       name: "otherInput",
       type: "text",
       placeholder: "Ferret",
-      label: "otherInput"
+      label: "Other Animal"
     }
   ]
 
