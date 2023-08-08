@@ -4,6 +4,12 @@
     justify-content: center;
     text-align: center;
     height: 100vh;
+    background: linear-gradient(
+        rgba(158, 158, 158, 0.6),
+        rgba(44, 44, 44, 0.2)),
+        url("https://images.pexels.com/photos/12538670/pexels-photo-12538670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 h4 {

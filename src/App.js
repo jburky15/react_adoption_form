@@ -79,29 +79,21 @@ function App() {
     e.preventDefault();
   }
 
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value })
+  }
+
   return (
     <div className="App">
       <form onSubmit={ handleSubmit }>
+        {inputs.map((input) => (
+          <FormInputs key={ input.id } { ...input } value={ values[input.name] } onChange={ onChange } />
+      ))}
+      <h3>What is your current housing situation</h3>
+      <FormRadios />
+      <FormCheckboxes label="Check here to be awesome" />
 
-        <FormInputs name="fullname" placeholder="Full Name"/>
-        <h3>Type of Residence</h3>
-        <FormRadios />
-        <FormInputs name="email" placeholder="Email"/>
-        <FormInputs name="address" placeholder="Address"/>
-        <FormInputs name="city" placeholder="City"/>
-        <FormInputs name="state" placeholder="State"/>
-        <FormInputs name="zip" placeholder="Zip"/>
-        <FormInputs name="phone" placeholder="Phone #"/>
-        <h3>Do you have any of the following in your home: </h3>
-        <FormCheckboxes label="Dog" />
-        <FormCheckboxes label="Cat" />
-        <FormCheckboxes label="Bird" />
-        <FormCheckboxes label="Rabbit" />
-        <FormCheckboxes label="Other Pet" />
-        <h4>If other, please specify:</h4>
-        <FormInputs name="otherInput" label="OtherInput" placeholder="Ferret" /> 
-        <button>Submit</button>
-
+      <button>Submit</button>
       </form>
     </div>
   );
